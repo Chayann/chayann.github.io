@@ -1,0 +1,88 @@
+body {
+    background-color: lightblue;
+}
+
+h1 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3em;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+}
+
+p {
+    font-size: 0.86em;
+}
+
+#paragraph2 {
+    background-color: white;
+    border: 5px solid green;
+    font-family: 'Times New Roman', Times, serif;
+    width: 51%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    padding: 15px 30px;
+    line-height: 1.9em;
+    font-size: 0.88em;
+}
+
+.blue{
+    background-color: darkblue;
+    color: white;
+    border: 1px solid black;
+    padding: 15px;
+    font-size: 0.85em;
+
+}
+
+ol {
+    list-style-type: decimal-leading-zero;
+    padding-left: 30px;
+    margin-left: 0;
+}
+
+ol li::marker {
+    font-size: 1.1em;
+}
+
+ol a {
+    color: darkblue;
+    font-size: 0.85em;
+}
+
+h3 {
+    font-size: 1em;
+}
+
+a[href*="w3schools"] {
+    color: darkred;
+}
+
+table {
+    width: auto;
+    border-collapse: collapse;
+    margin-top: 10px;
+    margin-left: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 11px;
+    
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 6px 8px;
+}
+
+th {
+    background-color: lightgray;
+}
+
+td {
+    background-color: white;
+}
