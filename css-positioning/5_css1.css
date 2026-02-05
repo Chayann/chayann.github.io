@@ -1,0 +1,206 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #FFFFFF;
+  color: #1f1f1f;
+}
+
+/* Jump Menu */
+#jumpMenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 15%;
+  height: 100vh;
+  padding: 18px 14px;
+  overflow-y: auto;
+  background: #588B8B;
+}
+
+#jumpMenu h2 {
+  margin: 0 0 16px;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #FFFFFF;
+}
+
+#jumpMenu a {
+  display: block;
+  margin: 12px 0;
+  padding: 8px 10px;
+  text-align: center;
+  color: #FFFFFF;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/* Header */
+main > header {
+  position: fixed;
+  top: 0;
+  left: 15%;
+  width: 85%;
+
+  background: #FFD5C2;          /* soft peach */
+  border-bottom: 5px solid rgba(0,0,0,0.12);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 14px 12px;
+  min-height: 120px;            /* grows if buttons wrap */
+  z-index: 1000;
+}
+
+/* Site title */
+main > header p {
+  margin: 0 0 10px;
+  font-size: 1.7rem;
+  font-weight: 900;
+  color: #1f1f1f;
+}
+
+/* Navigation bar */
+main > header nav {
+  display: flex;
+  flex-wrap: wrap;              /* prevents overlap */
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+/* Buttons */
+main > header nav button {
+  flex: 1 1 170px;
+  max-width: 240px;
+  padding: 12px 14px;
+
+  background: #F28F3B;          /* orange accent */
+  color: #FFFFFF;
+
+  border: 3px solid rgba(0,0,0,0.15);
+  font-size: 1.05rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+/* Main Content Area */
+main {
+  margin-left: 15%;
+  padding-top: 140px;     /* MUST be >= header height */
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-bottom: 40px;
+}
+
+/* Page Title */
+h1 {
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 3rem;
+  margin: 15px 0 22px;
+}
+
+/* Journal Articles (Flexbox) */
+#container {
+  display: flex;
+  flex-wrap: wrap;        /* reorganizes on resize */
+  justify-content: center;
+  align-items: flex-start;
+  gap: 35px;
+}
+
+#container article {
+  width: 300px;           /* fixed width (hint) */
+  padding: 0;
+}
+
+/* Article headings */
+#container article h2 {
+  margin: 0 0 12px;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.6rem;
+  font-weight: 800;
+}
+
+/* Article text */
+#container article p {
+  margin: 0 0 12px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.95rem;
+  line-height: 1.2;
+  text-align: justify;
+}
+
+/* Push Read more lower */
+#container article p:last-child {
+  margin-top: 20px;
+}
+
+#container article a {
+  color: #C8553D;
+  font-weight: 800;
+  text-decoration: underline;
+}
+
+/* Thank You (fixed bottom-right) */
+#thanks {
+  position: fixed;
+  right: 14px;
+  bottom: 14px;
+
+  background: #FFD5C2;
+  border: 2px solid rgba(0,0,0,0.25);
+  padding: 8px 12px;
+
+  font-size: 1.1rem;
+  font-family: "Times New Roman", Times, serif;
+  z-index: 1200;
+}
+
+footer {
+  margin-top: 40px;
+  padding: 18px 20px;
+  background: #588B8B;
+  color: #FFFFFF;
+}
+
+footer a {
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+
+/* Responsive Adjustments from W3 */
+@media (max-width: 900px) {
+  #jumpMenu { width: 22%; }
+  main { margin-left: 22%; }
+  main > header { left: 22%; width: 78%; }
+
+  main > header nav button {
+    flex: 1 1 150px;
+  }
+
+  main { padding-top: 180px; }
+}
+
+@media (max-width: 600px) {
+  #jumpMenu { width: 30%; }
+  main { margin-left: 30%; }
+  main > header { left: 30%; width: 70%; min-height: 160px; }
+
+  main { padding-top: 200px; }
+
+  #thanks {
+    font-size: 1rem;
+    padding: 7px 10px;
+  }
+}
