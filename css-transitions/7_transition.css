@@ -1,0 +1,199 @@
+* { box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background: #fff;
+  color: #1f1f1f;
+}
+
+/* LEFT NAV (buttons + dropdown)*/
+#menuItems {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 15%;
+  height: 100vh;
+  background: #000;
+  padding: 0;
+  z-index: 2000;
+}
+
+/* Make buttons stack */
+#menuItems button {
+  display: block;
+  width: 100%;
+  padding: 18px 10px;
+  border: 1px solid #111;
+  background: #0a2cff;     
+  color: #fff;
+  font-size: 1.05rem;
+  cursor: pointer;
+}
+
+/* Requirement: hover over nav button changes background */
+#menuItems button:hover {
+  background: #b38b2a;     /* gold hover */
+  transition: background-color 0.25s;
+}
+
+/* Dropdown list hidden by default */
+#jumpMenu {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 10px 0;
+  background: #daa520;     /* yellowdropdown panel */
+  border-top: 1px solid #111;
+  border-bottom: 1px solid #111;
+}
+
+/* Requirement: hover Recent Articles -> list appears */
+#recentArticles:hover + #jumpMenu,
+#jumpMenu:hover {
+  display: block;
+}
+
+/* Jump menu links */
+#jumpMenu li { margin: 0; }
+
+#jumpMenu a {
+  display: block;
+  padding: 6px 14px;
+  text-decoration: none;
+  color: #0a2cff;
+  text-align: center;
+}
+
+/* Requirement: hover over a link in the list changes font + background */
+#jumpMenu a:hover {
+  background: #0a2cff;
+  color: #fff;
+}
+
+main > header {
+  position: fixed;
+  top: 0;
+  left: 15%;
+  width: 85%;
+  background: #e30000;   
+  border-bottom: 3px solid rgba(0,0,0,0.35);
+  padding: 18px 12px;
+  z-index: 1500;
+  text-align: center;
+}
+
+main > header p {
+  margin: 0;
+  font-size: 2rem;
+  color: #000;
+}
+
+main {
+  margin-left: 15%;
+  padding-top: 80px; /* space for the fixed header */
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-bottom: 50px;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 2.5rem;
+  margin: 28px 0 28px;
+}
+
+/* Articles layout */
+#container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 35px;
+}
+
+/* Requirement: starts lightly-colored; on hover gets darker + expands (2s) */
+#container article {
+  width: 300px;
+  color: #b6b6b6;                 /* light text */
+  padding: 0;
+  transition: color 2s, padding 2s;
+}
+
+#container article:hover {
+  color: #111;                    /* darker text */
+  padding: 18px;
+}
+
+/* Article headings */
+#container article h2 {
+  margin: 0 0 12px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.5rem;
+}
+
+/* Article text */
+#container article p {
+  margin: 0 0 12px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.95rem;
+  line-height: 1.25;
+  text-align: justify;
+}
+
+/* Requirement: first letter of MAIN text only (not Read More paragraph) */
+#container article p:first-of-type::first-letter {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 36px;
+}
+
+/* Read more link styling */
+#container article a {
+  color: #0a2cff;
+  text-decoration: underline;
+}
+
+/* Requirement: Google links show arrow icon to the right */
+#container article a[href*="google.com"]::after {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  margin-left: 6px;
+  background-image: url("images/arrow.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* Thank you block */
+#thanks {
+  position: fixed;
+  right: 14px;
+  bottom: 14px;
+  background: #8fd3ff;
+  border: 2px solid rgba(0,0,0,0.45);
+  padding: 10px 14px;
+  font-size: 1.6rem;
+  font-family: "Times New Roman", Times, serif;
+  z-index: 2200;
+}
+
+#thanks a {
+  color: #0a2cff;
+  text-decoration: underline;
+  
+}
+
+footer {
+  margin-top: 40px;
+  padding: 18px 20px;
+  background: #000;
+  color: #fff;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: underline;
+}
