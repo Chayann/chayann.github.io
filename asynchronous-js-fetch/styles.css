@@ -1,0 +1,202 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.pageBackground {
+  min-height: 100vh;
+  background: #ffc8dd;
+  padding: 28px 12px;
+  box-sizing: border-box;
+}
+
+/* main card */
+.pokemonCard {
+  width: 700px;
+  min-height: 680px;
+  margin: 0 auto;
+  background: #ffffff;
+  border: 10px solid #cdb4db;
+  border-radius: 80px;
+  padding: 26px 26px 22px;
+  box-sizing: border-box;
+}
+
+/* header */
+.cardHeader {
+  text-align: center;
+}
+
+.searchLabel {
+  display: block;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.searchForm {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.searchInput {
+  width: 320px;
+  height: 30px;
+  font-size: 14px;
+  padding: 4px 6px;
+  box-sizing: border-box;
+}
+
+.findButton {
+  height: 32px;
+  padding: 0 14px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* image area */
+.imageArea {
+  display: flex;
+  justify-content: center;
+  margin: 6px 0 0;
+}
+
+/* main image (glitch img + pokemon) */
+.pokemonImage {
+  max-height: 300px;
+  height: auto;
+  width: auto;
+  image-rendering: pixelated;
+  margin-top: 16px;
+  margin-bottom: 20px;
+}
+
+.realPokemonImage {
+  height: 260px;   /* forces it to display bigger */
+  width: auto;
+}
+
+/* audio area */
+.audioArea {
+  text-align: center;
+  margin: 0 0 18px;
+}
+
+.pokemonAudio {
+  width: 65%;
+  max-width: 420px;
+}
+
+/* moves dropdowns */
+.movesArea {
+  width: 92%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 18px;
+}
+
+.moveDropdown {
+  height: 32px;
+  font-size: 14px;
+  border: 1px solid #666;
+  background: #ffffff;
+}
+
+/* add button */
+.addButtonArea {
+  text-align: center;
+  margin-top: 18px;
+}
+
+.addButton {
+  height: 34px;
+  padding: 0 18px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+/* team area hidden until add */
+.teamArea {
+  margin-top: 18px;
+  display: none;
+}
+
+.teamArea.showTeam {
+  display: block;
+}
+
+.teamTitle {
+  font-size: 18px;
+  margin: 0 0 12px;
+}
+
+/* team list */
+.teamList {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+/* each team member: sprite + text side by side + divider line */
+.teamList li {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid #ccc;
+  font-size: 14px;
+}
+
+/* small team sprite */
+.teamSprite {
+  width: 80px;
+  height: auto;
+  image-rendering: pixelated;
+}
+
+/* responsive adjustments */
+@media (max-width: 760px) {
+
+  .pokemonCard {
+    width: 95%;
+    min-height: 0;
+    border-radius: 45px;
+    padding: 22px 16px 18px;
+  }
+
+  .searchForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .searchInput {
+    width: 90%;
+    max-width: 360px;
+  }
+
+  .findButton {
+    width: 120px;
+  }
+
+  .pokemonAudio {
+    width: 80%;
+    max-width: 340px;
+  }
+
+  .movesArea {
+    width: 95%;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .teamList li {
+    gap: 12px;
+  }
+
+  .teamSprite {
+    width: 70px;
+  }
+}
