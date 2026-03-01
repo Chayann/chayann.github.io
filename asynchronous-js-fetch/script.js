@@ -289,7 +289,7 @@ function handlePokemonSearchSubmit(eventObject) {
       displayPokemonOnPage(pokemonObjectForPage);
     })
     .catch(function() {
-      alert("Could not load Pokemon. Try a name or a number between 1 and 151.");
+      alert("Could not load Pokemon. Try a different name or Pokemon ID number.");
     });
 }
 
